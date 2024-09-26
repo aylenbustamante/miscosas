@@ -1,0 +1,50 @@
+body {
+    background-color: #25231E;
+    margin: 0; 
+}
+
+.color-fondo {
+    background-color: #6e4b34;
+    height: 80%;
+    margin: 20px;
+}
+
+.color-fondo-dos{
+    background-color: #9B2424;
+    height: 80%;
+    margin: 5px;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+header {
+    background-color: #602421;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav {
+    border-bottom: 10px;
+}
+
+article {
+    background-color: blue;
+    padding: 5px;
+    margin: 5px;
+}
+
+footer {
+    color: white;
+    background-color: rgb(1, 73, 136);
+    padding: 100px;
+    text-align: center;
+}
+
+.destaca-rojo {
+    color: red;
+}
