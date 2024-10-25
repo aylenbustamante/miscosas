@@ -1,0 +1,69 @@
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirugía Dillom</title>
+    
+    <body>
+        <div>
+            <h1 id="arriba">Análisis de 'Por Cesárea' de Dillom</h1> 
+            <ul>
+                <li><a href="#Cirugía">Cirugía</a></li>
+                <li><a href="#cesarea">Por Cesárea</a></li>
+                <li><a href="#Dillom">Dillom</a></li>
+                <li><a href="#Spotify">Spotify</a></li>
+            </ul>
+        </div>
+        
+        <div class="container">
+            <section>
+                <h2 id="Cirugía">Cirugía</h2>
+                <a href="#arriba"><img src="img/gota de sangre.png" alt="gota de sangre" width="25"></a>
+
+                <p> Es la tercera cancion del album "Por Cesárea" de Dillom. Explora la obsesión y la dependencia emocional en las relaciones amorosas a traves de una metáfora quirurgica.
+                    La letra revela un deseo abrumado de control y conocimiento absoluto sobre el otro, evidenciado en lineas como <strong>"quiero saber que estas haciendo todo el día"</strong> y
+                <strong>"quisiera saber hasta el color de tus huesos"</strong> 
+                el uso de metaforas sugiere una relacion que trasciende el amor para adentrase a una obsesión casi patologica</p>
+            </section>
+                
+                     <section id="cesarea" >
+                    <h2>Por Cesárea</h2>
+                    <a href="#arriba"><img src="img/gota de sangre.png" alt="gota de sangre" width="25"></a>
+                    <p></p>
+
+                    <img src="img/portada-porcesarea.png" alt="imagen del álbum" width="300"> 
+                    <p>
+                        <strong>"Por Cesárea"</strong>  es el nuevo album de Dillom que propone tematicas complejas como los problemas de salud mental, los vinculos toxicos, los traumas de la infancia y hasta describe el femicidio en <strong>"Muñecas"</strong>  o un suicidio en <strong>"Reiki y yoga".</strong>
+                        <p> Es la historia de un personaje profundamente perturbado que nos cuenta sus pensamientos intrusivos y toxicos, que lo llevan a tomar las peores desiciones.
+                            El soundtrack esta lleno de referencias musicales como Charly Garcia, Andres Calamaro y Miranda.
+                        Ademas cuenta con un mini homenaje a <strong>Maria Elena Walsh</strong> en la canción <strong>La Carie</strong> interpretrada por Lali con un sample de la canción <strong>Plegaria Desvelada.</strong> </p>
+                   </p>
+                </section>
+            
+           
+
+
+
+    
+            <section id="Dillom">
+                <h2>¿Quien es Dilllom?</h2>
+                <a href="#arriba"><img src="img/gota de sangre.png" alt="gota de sangre" width="25"></a>
+                <p></p>
+                <img src="img/dillom_planomedio.jpg" alt="dillom rostro" width="400">
+                <p>Dylan León Masa (Balvanera,5 de diciembre 2000) conocido por su nombre artistico <strong>Dillom</strong> es un rapero, compositor y productor discografico argentino.
+                    Se dio a conocer al público con las canciones "Drippin" "Superglue" y su sesión con Bizarrap en el 2019. 
+                    En el 2021, lanzó su álbum debut, <strong>POST MORTEM</strong> que le valio una nominación en los <strong>Premios Carlos Gardel</strong> al mejor álbum de música urbana,
+                    es considerado uno de los referentes más importantes del nuevo rap argentino.
+                </p>
+                <img src="img/dillom-movistar-arena_planogeneral.jpg" alt="dillom y su banda" width="520">
+            </section>
+    
+            <section id="Spotify"; >
+                <h2>Spotify</h2>
+                <a href="#arriba"><img src="img/gota de sangre.png" alt="gota de sangre" width="25"></a>
+                <h6>haz click en el gatito para escuchar el album</h6>
+                <a href="https://open.spotify.com/intl-es/album/633jS6fM44Zbr1gyI0eF19" title="Spotify">
+                    <img src="img/spotify gatito.jpg" alt="icono de spotify" width="120">
+                </a>
+            </section>
+        </div>
+    </body>
+</html>
