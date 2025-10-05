@@ -1,17 +1,24 @@
-function mostrarTexto(texto, x, y) {
+ function mostrarTexto(texto, x, y) {
   push();
   fill(0, 0, 0, 150);
-  let anchoCuadro = 615;
-  let altoCuadro = 200;
-  rect(x - anchoCuadro / 2, y - altoCuadro / 2 - 15, anchoCuadro, altoCuadro, 100);
+  let anchoCuadro = 600;
+  let altoCuadro = 120;
+  rectMode(CENTER);
+  rect(x, altoCuadro/2 + 20, anchoCuadro, altoCuadro, 20);
 
   fill(255);
-  textSize(25);
-  textAlign(CENTER,TOP);
+  textSize(20);
+  textAlign(LEFT, TOP);
 
-  let limiteTexto = 580;
-  let a = width / 2 - 300;
-  let b = 30;
-  text(texto, a, b, limiteTexto);
+  let limiteTexto = 540;
+  let margenX = 300;
+  let margenY = 20;
+
+  text(
+    texto, 
+    x - anchoCuadro/2 + margenX, 
+    20 + margenY, 
+    limiteTexto
+  );
   pop();
 }
