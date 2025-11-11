@@ -1,11 +1,9 @@
 class Estado {
-    /**
-     * Maneja el estado del juego (puntuación, límites, control de flujo).
-     */
+    
     constructor(maxPanqueques, width, height) {
         this.MAX_PANQUEQUES = maxPanqueques;
         this.estadoJuego = 'JUGANDO'; // 'JUGANDO', 'GANADO', 'PERDIDO'
-        this.pilaPanqueques = []; // Array para almacenar los panqueques apilados (solo color/tipo)
+        this.pilaPanqueques = []; 
         this.alturaTotal = 0;
         this.jugadorY = height - 30;
     }
