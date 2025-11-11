@@ -1,26 +1,25 @@
 class Pantalla {
     
     estilizarBoton(boton) {
-    boton.style("padding", "1px 10px");
-    boton.style("font-size", "16px");
-    boton.style("border-radius", "20px");
-    boton.style("background", "rgba(255, 0, 0, 0.5)");
-    boton.style("color", "white");
-    boton.style("border", "2px solid rgba(52, 152, 191, 1)");
-    boton.style("font-weight", "bold");
-    boton.style("cursor", "pointer");
-}
+        boton.style("padding", "1px 10px");
+        boton.style("font-size", "16px");
+        boton.style("border-radius", "20px");
+        boton.style("background", "rgba(255, 0, 0, 0.5)");
+        boton.style("color", "white");
+        boton.style("border", "2px solid rgba(52, 152, 191, 1)");
+        boton.style("font-weight", "bold");
+        boton.style("cursor", "pointer");
+    }
 
     constructor(width, height) {
         this.width = width;
         this.height = height;
 
-        //imagenes
         this.imagenInicio = null;
         this.imagenCreditos = null;
         this.imagenInstrucciones = null;
+        this.imagenFondo = null;
         
-        //botones
         this.botonJugar = createButton('๋ ࣭ ⭑JUGAR⋆˚꩜｡');
         this.estilizarBoton(this.botonJugar);
         
@@ -36,21 +35,14 @@ class Pantalla {
         this.botonReiniciar = this.crearBotonReiniciar();
         this.estilizarBoton(this.botonReiniciar);
         
-  
-        //ocultaos
         this.ocultarTodos();
     }
     
-        setImagenInicio(img) {
-        this.imagenInicio = img;
-    }
-        
-        setImagenCreditos(img) {
-        this.imagenCreditos = img;
-    }
-        setImagenInstrucciones(img) {
-        this.imagenInstrucciones = img;
-    }
+    setImagenInicio(img) { this.imagenInicio = img; }
+    setImagenCreditos(img) { this.imagenCreditos = img; }
+    setImagenInstrucciones(img) { this.imagenInstrucciones = img; }
+    setImagenFondo(img) { this.imagenFondo = img; }
+
 
     ocultarTodos() {
         this.botonJugar.hide();
@@ -75,8 +67,7 @@ class Pantalla {
         this.botonReiniciar.hide();
     }
 
-    //PANTALLAS
-
+    // --- PANTALLAS DE MENÚ ---
     mostrarPantallaInicio() {
         background(220);
         if (this.imagenInicio) {
@@ -99,40 +90,40 @@ class Pantalla {
         });
     }
 
-   mostrarInstrucciones() {
-    background(240);
-    if (this.imagenInstrucciones) {
-        imageMode(CENTER);
-        image(this.imagenInstrucciones, this.width / 2, this.height / 2, this.width, this.height);
-    }
+    mostrarInstrucciones() {
+        background(240);
+        if (this.imagenInstrucciones) {
+            imageMode(CENTER);
+            image(this.imagenInstrucciones, this.width / 2, this.height / 2, this.width, this.height);
+        }
 
-      this.dibujarCuadroInferior();
-      
-      fill(255);                 
-      textSize(16);
-      textAlign(CENTER, CENTER);
-      
-      text(
-          "Usá las flechas para mover el plato y atrapá los panqueques\n" +
-          "𖦹 Usá las flechas para mover el plato y atrapá los panqueques\n" +
-          "𖦹 Evitá los panqueques rojos",
-          this.width / 2, 
-          this.height -170
+        this.dibujarCuadroInferior();
+        
+        fill(255); 
+        textSize(16);
+        textAlign(CENTER, CENTER);
+        
+        text(
+             "Usá las flechas para mover el plato y atrapá los panqueques\n" +
+             "𖦹 Evitá los panqueques rojos",
+             this.width / 2, 
+             this.height -170
         );
 
-    
-    this.botonComenzar.show();
-    this.botonComenzar.position(this.width / 2 - 95, this.height - 80);
-    this.botonComenzar.mousePressed(() => {
-        estado.estadoJuego = 'JUGANDO';
-        this.ocultarTodos();
         
-        if (!musica.isPlaying()) {
-        musica.loop(); 
-        }
-    });
-}
-        mostrarCreditos() {
+        this.botonComenzar.show();
+        this.botonComenzar.position(this.width / 2 - 95, this.height - 80);
+        this.botonComenzar.mousePressed(() => {
+            estado.estadoJuego = 'JUGANDO';
+            this.ocultarTodos();
+            
+            if (!musica.isPlaying()) {
+            musica.loop(); 
+            }
+        });
+    }
+
+    mostrarCreditos() {
         background(0);
         imageMode(CENTER);
         if (this.imagenCreditos) {
@@ -141,7 +132,7 @@ class Pantalla {
         
         fill(255);
         textSize(20);
-        textAlign(TOP, TOP);
+        textAlign(LEFT, TOP);
         text(
              "Hecho con ❤ por:\n" +
              "Aylen Bustamante 118978/1\n"+
@@ -154,22 +145,23 @@ class Pantalla {
         this.botonVolver.mousePressed(() => {
             estado.estadoJuego = 'INICIO';
             this.ocultarTodos();
+            console.log
         });
     }
-       
-      dibujarCuadroInferior() {
-      fill(34, 139, 34);   
-      rectMode(CENTER);
-  
-      const ancho = this.width * 0.80;  
-      const alto = 120;
-      const x = this.width / 2;
-      const y = this.height - 160;
-  
-      rect(x, y, ancho, alto, 20);
+    
+    dibujarCuadroInferior() {
+        fill(34, 139, 34);    
+        rectMode(CENTER);
+        
+        const ancho = this.width * 0.80;    
+        const alto = 120;
+        const x = this.width / 2;
+        const y = this.height - 160;
+        
+        rect(x, y, ancho, alto, 20);
     }
 
-    //DIBUJO PRINCIPAL
+    
     dibujar() {
         if (estado.estadoJuego === 'INICIO') {
             this.mostrarPantallaInicio();
@@ -186,13 +178,22 @@ class Pantalla {
             return;
         }
 
-        //juego normal
-        background(220);
+      
+        // VISUAL DEL JUEGO //
+      
+        if (this.imagenFondo) {
+            imageMode(CENTER); 
+            image(this.imagenFondo, this.width / 2, this.height / 2, this.width, this.height);
+        } 
+    
+        
+        //ELEMENTOS DEL JUEGO !!
         this.dibujarJugador();
         this.dibujarTorreApilada();
         this.dibujarPanquequeCayendo();
-        this.dibujarContador();
+        this.dibujarContador(); // Llama a la función estabilizada
 
+       //MNJ GANASTE Y PERDISTE
         if (estado.estadoJuego === 'GANADO') {
             this.PantallaGanaste();
             this.botonReiniciar.show();
@@ -204,12 +205,19 @@ class Pantalla {
         }
     }
 
-    //
-    dibujarJugador() {
+// CÓDIGO CORRECTO:
+dibujarJugador() {
+    // 1. Verificar si la propiedad 'imagen' del objeto 'jugador' existe
+    if (jugador.imagenPlato) { 
+        imageMode(CENTER); 
+        image(jugador.imagenPlato, jugador.x, jugador.y, jugador.ancho, jugador.alto);
+    } else {
+        // Fallback (dibujar el rectángulo por si la imagen falla)
         fill(50);
         rectMode(CENTER);
         rect(jugador.x, jugador.y, jugador.ancho, jugador.alto);
     }
+}
 
     dibujarTorreApilada() {
         const xPos = jugador.x;
@@ -230,10 +238,17 @@ class Pantalla {
     }
 
     dibujarContador() {
-        fill(0);
+        fill(255); 
+        textStyle(BOLD);
         textSize(24);
         textAlign(LEFT);
+        
+        stroke(0);
+        strokeWeight(3);
         text("Panqueques: " + estado.pilaPanqueques.length + " / " + estado.MAX_PANQUEQUES, 10, 30);
+        
+        noStroke();
+        textStyle(NORMAL); 
     }
 
     PantallaGanaste() {
@@ -251,6 +266,6 @@ class Pantalla {
         fill(255, 50, 50);
         textSize(20);
         textAlign(CENTER, CENTER);
-        text("¡PERDISTE! Tocaste un panqueque rojo boludin", this.width / 2, this.height / 2 - 20);
+        text("¡PERDISTE! q lelo", this.width / 2, this.height / 2 - 20);
     }
 }
